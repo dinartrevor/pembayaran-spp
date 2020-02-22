@@ -30,9 +30,7 @@
                 <th>Nama</th>
                 <th>Kelas</th>
                 <th>Jurusan</th>
-                <th>No Telepone</th>
-                <th>Tahun</th>
-                <th>Alamat</th>
+                <th>Email</th>
                 <th>Aksi</th>
               </tr>
             </thead>
@@ -44,13 +42,12 @@
                 <td>Nama</td>
                 <td>Kelas</td>
                 <td>Jurusan</td>
-                <td>No Telepone</td>
-                <td>Tahun</td>
-                <td>Alamat</td>
+                <td>Email</td>
                 <td>
                   <a href="/admin/siswa/edit-siswa" class="btn btn-warning">Edit</a>
                   <a href="#"class="btn btn-danger" onclick="return confirm('Apa kamu yakin ingin menghapus data ini?')">Hapus</a>
                   <a href="/admin/pembayaran" class="btn btn-primary">Bayar</a>
+                  <a href="/admin/siswa/detail-siswa" class="btn btn-alternate">Detail Siswa</a>
                 </td>
               </tr>
             </tbody>

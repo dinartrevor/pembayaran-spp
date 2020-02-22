@@ -41,7 +41,7 @@
         </li>
         <li>
           <a href="/admin/siswa" class="mm-{{Request::is('admin/siswa')?'active':''}}">
-            <i class="metismenu-icon pe-7s-users"></i>
+            <i class="metismenu-icon pe-7s-user"></i>
             Data Siswa
           </a>
         </li>
@@ -53,19 +53,19 @@
         </li>
         <li>
           <a href="/admin/kelas" class="mm-{{Request::is('admin/kelas')?'active':''}}">
-            <i class="metismenu-icon pe-7s-ball"></i>
+            <i class="metismenu-icon pe-7s-users"></i>
            Data Kelas
           </a>
         </li>
         <li>
           <a href="/admin/spp" class="mm-{{Request::is('admin/spp')?'active':''}}">
-            <i class="metismenu-icon pe-7s-medal"></i>
+            <i class="metismenu-icon pe-7s-cash"></i>
             Data Spp
           </a>
         </li>
         <li>
           <a href="/admin/pembayaran" class="mm-{{Request::is('admin/pembayaran')?'active':''}}">
-            <i class="metismenu-icon pe-7s-medal"></i>
+            <i class="metismenu-icon pe-7s-wallet"></i>
             Data Pembayaran
           </a>
         </li>

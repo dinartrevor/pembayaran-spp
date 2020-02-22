@@ -31,6 +31,10 @@ Route::get('/admin/siswa/tambah-siswa', function () {
 Route::get('/admin/siswa/edit-siswa', function () {
     return view('admin.siswa.edit-siswa');
 });
+Route::get('/admin/siswa/detail-siswa', function () {
+    return view('admin.siswa.detail-siswa');
+});
+
 
 // petugas
 Route::get('/admin/petugas', function () {

@@ -75,32 +75,9 @@
 		}]);
   });
 </script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
+<script src="{{ asset('js/jquery-ui.js') }}"></script>
 <script>
-		$(document).ready(function() {
-				$( "#search_ekskul" ).autocomplete({
-						source: function(request, response) {
-								$.ajax({
-										url: "{{url('seacrh')}}",
-										data: { istilah: request.term },
-										dataType: "json",
-										success: function(data)
-										{
-												var resp = $.map(data,function(obj){
-														return obj.name;
-												}); 
-												// console.log(resp);
-												response(resp);
-												
-										}
-								});
-						
-						},
-						minLength: 1
-					
-				});
-		});
+	$( "#datepicker" ).datepicker({dateFormat:"dd MM yy"}).datepicker("setDate",new Date());
 </script>
 </body>
 </html>

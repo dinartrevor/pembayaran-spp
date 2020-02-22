@@ -82,7 +82,7 @@
         </div>
       </div>
     </div>
-     <div class="col-md-3">
+    <div class="col-md-3">
       <div class="main-card mb-3 card">
         <div class="card-body">
           <h5 class="card-title d-inline">April</h5>
@@ -100,10 +100,154 @@
         </div>
       </div>
     </div>
+    <div class="col-md-3">
+      <div class="main-card mb-3 card">
+        <div class="card-body">
+          <h5 class="card-title d-inline">Mei</h5>
+          <span class="badge badge-pill badge-success float-right">Lunas</span>
+          <p class="mt-1">Nominal : 10000</p>
+          <p>Sisa : 0  </p>
+          <hr>
+          <a href="/admin/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
+          {{-- <div class="feature-icon d-inline float-right">
+            <h5>
+              <a href="#"><i class="pe-7s-pen mr-2"></i></a>
+              <a href="#"" onclick="return confirm('Apa kamu yakin ingin menghapus ?')"><i class="pe-7s-close-circle"></i></a>
+            </h5>
+          </div> --}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="main-card mb-3 card">
+        <div class="card-body">
+          <h5 class="card-title d-inline">Juni</h5>
+          <span class="badge badge-pill badge-warning float-right">Belum Lunas</span>
+          <p class="mt-1">Nominal : 10000</p>
+          <p>Sisa : 0  </p>
+          <hr>
+          <a href="/admin/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
+          {{-- <div class="feature-icon d-inline float-right">
+            <h5>
+              <a href="#"><i class="pe-7s-pen mr-2"></i></a>
+              <a href="#"" onclick="return confirm('Apa kamu yakin ingin menghapus ?')"><i class="pe-7s-close-circle"></i></a>
+            </h5>
+          </div> --}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="main-card mb-3 card">
+        <div class="card-body">
+          <h5 class="card-title d-inline">Juli</h5>
+          <span class="badge badge-pill badge-success float-right">Lunas</span>
+          <p class="mt-1">Nominal : 10000</p>
+          <p>Sisa : 0  </p>
+          <hr>
+          <a href="/admin/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
+          {{-- <div class="feature-icon d-inline float-right">
+            <h5>
+              <a href="#"><i class="pe-7s-pen mr-2"></i></a>
+              <a href="#"" onclick="return confirm('Apa kamu yakin ingin menghapus ?')"><i class="pe-7s-close-circle"></i></a>
+            </h5>
+          </div> --}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="main-card mb-3 card">
+        <div class="card-body">
+          <h5 class="card-title d-inline">Agustus</h5>
+          <span class="badge badge-pill badge-warning float-right">Belum Lunas</span>
+          <p class="mt-1">Nominal : 10000</p>
+          <p>Sisa : 0  </p>
+          <hr>
+          <a href="/admin/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
+          {{-- <div class="feature-icon d-inline float-right">
+            <h5>
+              <a href="#"><i class="pe-7s-pen mr-2"></i></a>
+              <a href="#"" onclick="return confirm('Apa kamu yakin ingin menghapus ?')"><i class="pe-7s-close-circle"></i></a>
+            </h5>
+          </div> --}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="main-card mb-3 card">
+        <div class="card-body">
+          <h5 class="card-title d-inline">September</h5>
+          <span class="badge badge-pill badge-success float-right">Lunas</span>
+          <p class="mt-1">Nominal : 10000</p>
+          <p>Sisa : 0  </p>
+          <hr>
+          <a href="/admin/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
+          {{-- <div class="feature-icon d-inline float-right">
+            <h5>
+              <a href="#"><i class="pe-7s-pen mr-2"></i></a>
+              <a href="#"" onclick="return confirm('Apa kamu yakin ingin menghapus ?')"><i class="pe-7s-close-circle"></i></a>
+            </h5>
+          </div> --}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="main-card mb-3 card">
+        <div class="card-body">
+          <h5 class="card-title d-inline">Oktober</h5>
+          <span class="badge badge-pill badge-warning float-right">Belum Lunas</span>
+          <p class="mt-1">Nominal : 10000</p>
+          <p>Sisa : 0  </p>
+          <hr>
+          <a href="/admin/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
+          {{-- <div class="feature-icon d-inline float-right">
+            <h5>
+              <a href="#"><i class="pe-7s-pen mr-2"></i></a>
+              <a href="#"" onclick="return confirm('Apa kamu yakin ingin menghapus ?')"><i class="pe-7s-close-circle"></i></a>
+            </h5>
+          </div> --}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="main-card mb-3 card">
+        <div class="card-body">
+          <h5 class="card-title d-inline">November</h5>
+          <span class="badge badge-pill badge-success float-right">Lunas</span>
+          <p class="mt-1">Nominal : 10000</p>
+          <p>Sisa : 0  </p>
+          <hr>
+          <a href="/admin/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
+          {{-- <div class="feature-icon d-inline float-right">
+            <h5>
+              <a href="#"><i class="pe-7s-pen mr-2"></i></a>
+              <a href="#"" onclick="return confirm('Apa kamu yakin ingin menghapus ?')"><i class="pe-7s-close-circle"></i></a>
+            </h5>
+          </div> --}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="main-card mb-3 card">
+        <div class="card-body">
+          <h5 class="card-title d-inline">Desember</h5>
+          <span class="badge badge-pill badge-warning float-right">Belum Lunas</span>
+          <p class="mt-1">Nominal : 10000</p>
+          <p>Sisa : 0  </p>
+          <hr>
+          <a href="/admin/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
+          {{-- <div class="feature-icon d-inline float-right">
+            <h5>
+              <a href="#"><i class="pe-7s-pen mr-2"></i></a>
+              <a href="#"" onclick="return confirm('Apa kamu yakin ingin menghapus ?')"><i class="pe-7s-close-circle"></i></a>
+            </h5>
+          </div> --}}
+        </div>
+      </div>
+    </div>
 
   </div>
   <hr>
-  <p class="float-right">Total : 99999</p>
+  <h2 class="float-right">Total : 99999</h2>
 
 
 @endsection

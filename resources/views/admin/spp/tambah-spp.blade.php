@@ -22,17 +22,22 @@
         <div class="row">
           <div class="col-md-12 col-xl-12 mb-3">
             <h5 class="card-title">Tambah SPP </h5>
-            <div class="form-group">
-                <label for="Tahun">Tahun</label>
-                <input type="text" class="form-control"   name="tahun">
+            <div class="form-row">
+              <div class="col-md-6">
+                  <div class="position-relative form-group">
+                    <label for="year" class="">Tahun</label>
+                    <input name="year" id="year" placeholder="Masukan Tahun" type="text" class="form-control">
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="position-relative form-group">
+                    <label for="nominal" class="">Nominal</label>
+                    <input name="nominal" id="nominal" placeholder="Masukan Nominal" type="text" class="form-control">
+                </div>
+              </div>
             </div>
-
-            <div class="form-group">
-                <label for="nominal">Nominal</label>
-                <input type="text" class="form-control"   name="nominal">
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Simpan</button>
-            <a href="/admin/kelas" class="btn btn-light btn-block">Batal</a>
+            <button type="submit" class="btn btn-primary">Simpan</button>
+            <a href="/admin/spp" class="btn btn-light">Batal</a>
           </div>
         </div>
       </form>

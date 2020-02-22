@@ -27,7 +27,7 @@
                 <div class="custom-checkbox custom-control d-inline">
                   <input type="checkbox" value="10" id="l" name="class" class="custom-control-input">
                   <label class="custom-control-label" for="l">
-                   10
+                  10
                   </label>
                 </div>
                 <div class="custom-checkbox custom-control d-inline">

@@ -32,11 +32,11 @@
             </div>
             <div class="form-group">
               <label for="total_pay">Total Bayar</label>
-              <input type="text" class="form-control" value=""  name="total_pay">
+              <input type="text" class="form-control" id="txtbilling" value="0"  name="total_pay">
             </div>
             <div class="form-group">
-              <div class="custom-radio custom-control d-inline">
-                <input type="radio" value="Lunas" id="l"  class="custom-control-input">
+              <div class="custom-checkbox custom-control d-inline">
+                <input type="checkbox" value="Lunas" id="l"  onclick="ShiptoBill()" class="custom-control-input">
                 <label class="custom-control-label" for="l">
                   Lunas
                 </label>
@@ -49,4 +49,18 @@
       </form>
     </div>
   </div>
+  <script>
+function ShiptoBill()
+{
+  var check = document.getElementById("l").checked;
+  if(check == true)
+  {
+    document.getElementById("txtbilling").value='600000';
+  } else {
+    document.getElementById("txtbilling").value='0';
+  }
+
+}
+  </script>
+  
 @endsection

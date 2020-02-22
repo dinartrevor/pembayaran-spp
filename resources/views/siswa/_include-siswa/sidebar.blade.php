@@ -41,7 +41,7 @@
         </li>
         <li>
           <a href="/siswa/histori-pembayaran" class="mm-{{Request::is('siswa/histori-pembayaran')?'active':''}}">
-            <i class="metismenu-icon pe-7s-users"></i>
+            <i class="metismenu-icon pe-7s-wallet"></i>
            Histori Pembayaran
           </a>
         </li>
