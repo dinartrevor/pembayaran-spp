@@ -19,7 +19,7 @@
       <div class="card">
         <div class="card-body">
           <div class="feature-btn mb-3">
-            <a href="#"class="btn btn-primary">Tambah</a>
+            <a href="/admin/siswa/tambah-siswa"class="btn btn-primary">Tambah</a>
           </div>
           <table class="table table-striped table-hover" id="dataTables" width="100%">
             <thead>
@@ -27,11 +27,12 @@
                 <th>No</th>
                 <th>Nisn</th>
                 <th>Nis</th>
-                <th>Nama Lengkap</th>
+                <th>Nama</th>
                 <th>Kelas</th>
-                <th>Alamat</th>
+                <th>Jurusan</th>
                 <th>No Telepone</th>
-                <th>Tahun Ajaran</th>
+                <th>Tahun</th>
+                <th>Alamat</th>
                 <th>Aksi</th>
               </tr>
             </thead>
@@ -40,14 +41,16 @@
                 <td>1</td>
                 <td>Nisn</td>
                 <td>Nis</td>
-                <td>Nama Lengkap</td>
+                <td>Nama</td>
                 <td>Kelas</td>
-                <td>Alamat</td>
+                <td>Jurusan</td>
                 <td>No Telepone</td>
-                <td>Tahun Ajaran</td>
+                <td>Tahun</td>
+                <td>Alamat</td>
                 <td>
-                  <a href="#" class="btn btn-warning">Edit</a>
+                  <a href="/admin/siswa/edit-siswa" class="btn btn-warning">Edit</a>
                   <a href="#"class="btn btn-danger" onclick="return confirm('Apa kamu yakin ingin menghapus data ini?')">Hapus</a>
+                  <a href="/admin/pembayaran" class="btn btn-primary">Bayar</a>
                 </td>
               </tr>
             </tbody>

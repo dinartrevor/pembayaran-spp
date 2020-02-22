@@ -23,24 +23,8 @@
           <div class="col-md-12 col-xl-12 mb-3">
             <h5 class="card-title">Detail Pembayaran</h5>
             <div class="form-group">
-              <label for="name">Nama Siswa</label>
-            <input type="text" class="form-control" value="Dinar" name="name_coach">
-            </div>
-            <div class="form-group">
               <label for="no_pay">Nomer Pembayaran</label>
               <input type="text" class="form-control"  value="0000001" name="no_pay">
-            </div>
-            <div class="form-group">
-              <label for="pay_date">Tanggal Bayar</label>
-              <input type="text" class="form-control" value="24"  name="pay_date">
-            </div>
-            <div class="form-group">
-              <label for="pay_month">Bulan Bayar</label>
-              <input type="text" class="form-control" value="03"  name="pay_month">
-            </div>
-            <div class="form-group">
-              <label for="pay_year">Tahun Bayar</label>
-              <input type="text" class="form-control" value="2020"  name="pay_year">
             </div>
             <div class="form-group">
               <label for="year">Tahun Ajaran</label>

@@ -36,10 +36,11 @@
           <h5 class="card-title d-inline">Januari</h5>
           <span class="badge badge-pill badge-success float-right">lunas</span>
           <p class="mt-1">Nominal : 10000</p>
+          <p>Sisa : 0  </p>
           <hr>
-          <a href="/admin/pembayaran/detail-pembayaran" class="btn btn-primary">Bayar</a>
-    
-        
+          <a href="/admin/pembayaran/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
+
+
           {{-- <
           </div> --}}
         </div>
@@ -51,8 +52,9 @@
           <h5 class="card-title d-inline">Februari</h5>
           <span class="badge badge-pill badge-warning float-right">Belum Lunas</span>
           <p class="mt-1">Nominal : 10000</p>
+          <p>Sisa : 0  </p>
           <hr>
-          <a href="/admin/detail-pembayaran" class="btn btn-primary">Bayar</a>
+            <a href="/admin/pembayaran/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
           {{-- <div class="feature-icon d-inline float-right">
             <h5>
               <a href="#"><i class="pe-7s-pen mr-2"></i></a>
@@ -68,8 +70,9 @@
           <h5 class="card-title d-inline">Maret</h5>
           <span class="badge badge-pill badge-success float-right">lunas</span>
           <p class="mt-1">Nominal : 10000</p>
+          <p>Sisa : 0  </p>
           <hr>
-          <a href="/admin/detail-pembayaran" class="btn btn-primary">Bayar</a>
+            <a href="/admin/pembayaran/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
           {{-- <div class="feature-icon d-inline float-right">
             <h5>
               <a href="#"><i class="pe-7s-pen mr-2"></i></a>
@@ -85,8 +88,9 @@
           <h5 class="card-title d-inline">April</h5>
           <span class="badge badge-pill badge-warning float-right">Belum Lunas</span>
           <p class="mt-1">Nominal : 10000</p>
+          <p>Sisa : 0  </p>
           <hr>
-          <a href="/admin/detail-pembayaran" class="btn btn-primary">Bayar</a>
+          <a href="/admin/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
           {{-- <div class="feature-icon d-inline float-right">
             <h5>
               <a href="#"><i class="pe-7s-pen mr-2"></i></a>
@@ -96,10 +100,10 @@
         </div>
       </div>
     </div>
-  
-  </div> 
+
+  </div>
   <hr>
-  <p class="float-right">Total : xxxx</p>
-  
+  <p class="float-right">Total : 99999</p>
+
 
 @endsection

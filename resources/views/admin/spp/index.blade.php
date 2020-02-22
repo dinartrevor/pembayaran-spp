@@ -19,7 +19,7 @@
       <div class="card">
         <div class="card-body">
           <div class="feature-btn mb-3">
-            <a href="#" class="btn btn-primary">Tambah</a>
+            <a href="/admin/spp/tambah-spp" class="btn btn-primary">Tambah</a>
           </div>
           <table class="table table-striped table-hover" id="dataTables" width="100%">
             <thead>
@@ -36,7 +36,7 @@
                 <td>Tahun Ajaran</td>
                 <td>Nominal</td>
                 <td>
-                  <a href="#" class="btn btn-warning">Edit</a>
+                  <a href="/admin/spp/edit-spp" class="btn btn-warning">Edit</a>
                   <a href="#"class="btn btn-danger" onclick="return confirm('Apa kamu yakin ingin menghapus data ini?')">Hapus</a>
                 </td>
               </tr>
