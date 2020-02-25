@@ -18,6 +18,24 @@
     <div class="col-md-12 col-xl-12">
       <div class="card">
         <div class="card-body">
+          @if($message=Session::get('sukses'))
+              <div class="alert alert-primary alert-block">
+                <button type="button"class="close" data-dismiss="alert">X</button>
+                <strong>{{$message}}</strong>
+              </div>
+            @endif
+            @if($message=Session::get('update'))
+              <div class="alert alert-success alert-block">
+                <button type="button"class="close" data-dismiss="alert">X</button>
+                <strong>{{$message}}</strong>
+              </div>
+            @endif
+            @if($message=Session::get('delete'))
+              <div class="alert alert-danger alert-block">
+                <button type="button"class="close" data-dismiss="alert">X</button>
+                <strong>{{$message}}</strong>
+              </div>
+            @endif
           <div class="feature-btn mb-3">
             <a href="/admin/kelas/tambah-kelas" class="btn btn-primary">Tambah</a>
           </div>
@@ -31,15 +49,20 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>Nama Kelas</td>
-                <td>Jurusan</td>
-                <td>
-                  <a href="/admin/kelas/edit-kelas" class="btn btn-warning">Edit</a>
-                  <a href="#"class="btn btn-danger" onclick="return confirm('Apa kamu yakin ingin menghapus data ini?')">Hapus</a>
-                </td>
-              </tr>
+              @php
+                $no = 1
+              @endphp
+              @foreach($grade as $g)
+                <tr>
+                  <td>{{$no++}}</td>
+                  <td>{{$g->name}}</td>
+                  <td>{{$g->majors}}</td>
+                  <td>
+                    <a href="{{url('/admin/kelas/edit-kelas/'.$g->id)}}" class="btn btn-warning">Edit</a>
+                    <a href="{{url('/admin/kelas/delete-kelas/'.$g->id)}}"class="btn btn-danger" onclick="return confirm('Apa kamu yakin ingin menghapus data ini?')">Hapus</a>
+                  </td>
+                </tr>
+              @endforeach
             </tbody>
           </table>
         </div>

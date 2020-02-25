@@ -31,21 +31,28 @@
                 <th>Tanggal Bayar</th>
                 <th>Nama Petugas</th>
                 <th>Total Bayar</th>
+                <th>Status</th>
               </tr>
             </thead>
             <tbody>
+              @php
+                $no = 1
+              @endphp
+              @foreach($transaction as $s)
               <tr>
-                <td>1</td>
-                <td>Nomer Pembayaran</td>
-                <td>Nis</td>
-                <td>Nama Siswa</td>
-                <td>Kelas</td>
-                <td>Jurusan</td>
-                <td>Tahun Ajaran</td>
-                <td>Tanggal Bayar</td>
-                <td>Nama Petugas</td>
-                <td>Total Bayar</td>
+                <td>{{$no++}}</td>
+                <td>{{$s->payment_number}}</td>
+                <td>{{$s->student->nis}}</td>
+                <td>{{$s->student->name}}</td>
+                <td>{{$s->student->grade->name}}</td>
+                <td>{{$s->student->grade->majors}}</td>
+                <td>{{$s->moneyOrder->year}}</td>
+                <td>{{$s->pay_date}}</td>
+                <td>{{$s->user->level}}</td>
+                <td>{{$s->total_pay}}</td>
+                <td>{{$s->status}}</td>
               </tr>
+              @endforeach
             </tbody>
           </table>
         </div>

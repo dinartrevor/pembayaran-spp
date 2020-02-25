@@ -20,231 +20,52 @@
       <div class="form-group row">
         <div class="col-lg">
           <label for="">Tahun Ajaran</label>
-          <input type="text" id="search_ekskul" name="search_ekskul"class="form-control"placeholder="Tahun Ajaran" disabled>
+          <input type="text" id="search_ekskul" name="search_ekskul"class="form-control"value="{{$student->moneyOrder->year}}" disabled>
         </div>
         <div class="col-lg">
           <label for="">Total SPP</label>
-          <input type="text" id="search_ekskul" name="search_ekskul"class="form-control"placeholder="Total SPP" disabled>
+          <input type="text" id="search_ekskul" name="search_ekskul"class="form-control"value="{{$student->moneyOrder->nominal}}" disabled>
         </div>
       </div>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-3">
-      <div class="main-card mb-3 card">
-        <div class="card-body">
-          <h5 class="card-title d-inline">Januari</h5>
-          <span class="badge badge-pill badge-success float-right">lunas</span>
-          <p class="mt-1">Nominal : 10000</p>
-          <p>Sisa : 0  </p>
-          <hr>
-          <a href="/admin/pembayaran/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
-
-
-          {{-- <
-          </div> --}}
-        </div>
+    @for ($i = 0; $i < 12; $i++)
+    <div class="col-lg-6 col-xl-4">
+      <div class="mb-3 card card-body">
+        <h5 class="card-title">{{$namaBulan[$i]}}</h5>
+        Nominal : Rp.{{$student->moneyOrder->nominal/12}}
+        @php
+          $bulan = $i+1;
+        @endphp
+        <a href="{{ url('/admin/pembayaran/detail-pembayaran/'.$student->id.'/'.$bulan) }}" class="btn btn-primary">Bayar</a>
+        @foreach ($pembayaran as $p)
+        @if ($p->status =='belum lunas' && $p->student_id == $student->id && $p->pay_month == $bulan)
+        <a href="{{ url('/admin/pembayaran/edit/'.$p->id.'/'.$student->id.'/'.$bulan) }}" class="mb-1 btn btn-danger">Bayar yang belum lunas</a>
+        @endif
+        @if ($p->status =='lunas' && $p->student_id == $student->id && $p->pay_month == $bulan && $p->total_pay == $student->moneyOrder->nominal/12)
+        <a href="{{ url('siswa/'.$student->id.'/'.$bulan) }}" class="btn btn-light">Lunas</a>          
+        @endif
+        @endforeach
       </div>
     </div>
-    <div class="col-md-3">
-      <div class="main-card mb-3 card">
-        <div class="card-body">
-          <h5 class="card-title d-inline">Februari</h5>
-          <span class="badge badge-pill badge-warning float-right">Belum Lunas</span>
-          <p class="mt-1">Nominal : 10000</p>
-          <p>Sisa : 0  </p>
-          <hr>
-            <a href="/admin/pembayaran/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
-          {{-- <div class="feature-icon d-inline float-right">
-            <h5>
-              <a href="#"><i class="pe-7s-pen mr-2"></i></a>
-              <a href="#"" onclick="return confirm('Apa kamu yakin ingin menghapus ?')"><i class="pe-7s-close-circle"></i></a>
-            </h5>
-          </div> --}}
-        </div>
+    @endfor
+    
+    {{-- <div class="col-lg-6 col-xl-4">
+      <div class="mb-3 card card-body bg-success">
+        <h5 class="card-title">Januari</h5>
+        Nominal : Rp.300.000
+        <button class="btn btn-light mt-3" disabled>Sudah Lunas</button>
       </div>
     </div>
-    <div class="col-md-3">
-      <div class="main-card mb-3 card">
-        <div class="card-body">
-          <h5 class="card-title d-inline">Maret</h5>
-          <span class="badge badge-pill badge-success float-right">lunas</span>
-          <p class="mt-1">Nominal : 10000</p>
-          <p>Sisa : 0  </p>
-          <hr>
-            <a href="/admin/pembayaran/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
-          {{-- <div class="feature-icon d-inline float-right">
-            <h5>
-              <a href="#"><i class="pe-7s-pen mr-2"></i></a>
-              <a href="#"" onclick="return confirm('Apa kamu yakin ingin menghapus ?')"><i class="pe-7s-close-circle"></i></a>
-            </h5>
-          </div> --}}
-        </div>
+    
+    <div class="col-lg-6 col-xl-4">
+      <div class="mb-3 card card-body bg-warning">
+        <h5 class="card-title">Januari</h5>
+        Nominal : Rp.300.000
+        <button class="btn btn-danger mt-3">Bayar</button>
       </div>
-    </div>
-    <div class="col-md-3">
-      <div class="main-card mb-3 card">
-        <div class="card-body">
-          <h5 class="card-title d-inline">April</h5>
-          <span class="badge badge-pill badge-warning float-right">Belum Lunas</span>
-          <p class="mt-1">Nominal : 10000</p>
-          <p>Sisa : 0  </p>
-          <hr>
-          <a href="/admin/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
-          {{-- <div class="feature-icon d-inline float-right">
-            <h5>
-              <a href="#"><i class="pe-7s-pen mr-2"></i></a>
-              <a href="#"" onclick="return confirm('Apa kamu yakin ingin menghapus ?')"><i class="pe-7s-close-circle"></i></a>
-            </h5>
-          </div> --}}
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="main-card mb-3 card">
-        <div class="card-body">
-          <h5 class="card-title d-inline">Mei</h5>
-          <span class="badge badge-pill badge-success float-right">Lunas</span>
-          <p class="mt-1">Nominal : 10000</p>
-          <p>Sisa : 0  </p>
-          <hr>
-          <a href="/admin/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
-          {{-- <div class="feature-icon d-inline float-right">
-            <h5>
-              <a href="#"><i class="pe-7s-pen mr-2"></i></a>
-              <a href="#"" onclick="return confirm('Apa kamu yakin ingin menghapus ?')"><i class="pe-7s-close-circle"></i></a>
-            </h5>
-          </div> --}}
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="main-card mb-3 card">
-        <div class="card-body">
-          <h5 class="card-title d-inline">Juni</h5>
-          <span class="badge badge-pill badge-warning float-right">Belum Lunas</span>
-          <p class="mt-1">Nominal : 10000</p>
-          <p>Sisa : 0  </p>
-          <hr>
-          <a href="/admin/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
-          {{-- <div class="feature-icon d-inline float-right">
-            <h5>
-              <a href="#"><i class="pe-7s-pen mr-2"></i></a>
-              <a href="#"" onclick="return confirm('Apa kamu yakin ingin menghapus ?')"><i class="pe-7s-close-circle"></i></a>
-            </h5>
-          </div> --}}
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="main-card mb-3 card">
-        <div class="card-body">
-          <h5 class="card-title d-inline">Juli</h5>
-          <span class="badge badge-pill badge-success float-right">Lunas</span>
-          <p class="mt-1">Nominal : 10000</p>
-          <p>Sisa : 0  </p>
-          <hr>
-          <a href="/admin/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
-          {{-- <div class="feature-icon d-inline float-right">
-            <h5>
-              <a href="#"><i class="pe-7s-pen mr-2"></i></a>
-              <a href="#"" onclick="return confirm('Apa kamu yakin ingin menghapus ?')"><i class="pe-7s-close-circle"></i></a>
-            </h5>
-          </div> --}}
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="main-card mb-3 card">
-        <div class="card-body">
-          <h5 class="card-title d-inline">Agustus</h5>
-          <span class="badge badge-pill badge-warning float-right">Belum Lunas</span>
-          <p class="mt-1">Nominal : 10000</p>
-          <p>Sisa : 0  </p>
-          <hr>
-          <a href="/admin/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
-          {{-- <div class="feature-icon d-inline float-right">
-            <h5>
-              <a href="#"><i class="pe-7s-pen mr-2"></i></a>
-              <a href="#"" onclick="return confirm('Apa kamu yakin ingin menghapus ?')"><i class="pe-7s-close-circle"></i></a>
-            </h5>
-          </div> --}}
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="main-card mb-3 card">
-        <div class="card-body">
-          <h5 class="card-title d-inline">September</h5>
-          <span class="badge badge-pill badge-success float-right">Lunas</span>
-          <p class="mt-1">Nominal : 10000</p>
-          <p>Sisa : 0  </p>
-          <hr>
-          <a href="/admin/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
-          {{-- <div class="feature-icon d-inline float-right">
-            <h5>
-              <a href="#"><i class="pe-7s-pen mr-2"></i></a>
-              <a href="#"" onclick="return confirm('Apa kamu yakin ingin menghapus ?')"><i class="pe-7s-close-circle"></i></a>
-            </h5>
-          </div> --}}
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="main-card mb-3 card">
-        <div class="card-body">
-          <h5 class="card-title d-inline">Oktober</h5>
-          <span class="badge badge-pill badge-warning float-right">Belum Lunas</span>
-          <p class="mt-1">Nominal : 10000</p>
-          <p>Sisa : 0  </p>
-          <hr>
-          <a href="/admin/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
-          {{-- <div class="feature-icon d-inline float-right">
-            <h5>
-              <a href="#"><i class="pe-7s-pen mr-2"></i></a>
-              <a href="#"" onclick="return confirm('Apa kamu yakin ingin menghapus ?')"><i class="pe-7s-close-circle"></i></a>
-            </h5>
-          </div> --}}
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="main-card mb-3 card">
-        <div class="card-body">
-          <h5 class="card-title d-inline">November</h5>
-          <span class="badge badge-pill badge-success float-right">Lunas</span>
-          <p class="mt-1">Nominal : 10000</p>
-          <p>Sisa : 0  </p>
-          <hr>
-          <a href="/admin/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
-          {{-- <div class="feature-icon d-inline float-right">
-            <h5>
-              <a href="#"><i class="pe-7s-pen mr-2"></i></a>
-              <a href="#"" onclick="return confirm('Apa kamu yakin ingin menghapus ?')"><i class="pe-7s-close-circle"></i></a>
-            </h5>
-          </div> --}}
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="main-card mb-3 card">
-        <div class="card-body">
-          <h5 class="card-title d-inline">Desember</h5>
-          <span class="badge badge-pill badge-warning float-right">Belum Lunas</span>
-          <p class="mt-1">Nominal : 10000</p>
-          <p>Sisa : 0  </p>
-          <hr>
-          <a href="/admin/detail-pembayaran" class="btn btn-primary btn-block">Bayar</a>
-          {{-- <div class="feature-icon d-inline float-right">
-            <h5>
-              <a href="#"><i class="pe-7s-pen mr-2"></i></a>
-              <a href="#"" onclick="return confirm('Apa kamu yakin ingin menghapus ?')"><i class="pe-7s-close-circle"></i></a>
-            </h5>
-          </div> --}}
-        </div>
-      </div>
-    </div>
-
+    </div> --}}
   </div>
   <hr>
   <h2 class="float-right">Total : 99999</h2>

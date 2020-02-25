@@ -17,7 +17,7 @@
 
   <div class="card">
     <div class="card-body">
-      <form action="#" method="POST" class="form">
+      <form action="{{route('addStudent')}}" method="POST" class="form">
         @csrf
         <div class="row">
           <div class="col-md-12 col-xl-12 mb-3">
@@ -26,13 +26,13 @@
               <div class="col-md-6">
                   <div class="position-relative form-group">
                     <label for="nisn" class="">Nisn</label>
-                    <input name="nisn" id="nisn" placeholder="Masukan Nisn" type="text" class="form-control">
+                    <input name="nisn" id="nisn" placeholder="Masukan Nisn" type="text" class="form-control" >
                   </div>
               </div>
               <div class="col-md-6">
                   <div class="position-relative form-group">
-                    <label for="nis" class="">Nis</label>
-                    <input name="nis" id="nis" placeholder="Masukan Nis" type="text" class="form-control">
+                    <label for="nis" class="">Nis</label> 
+                    <input name="nis" id="nis" placeholder="Masukan Nis" type="text" class="form-control" >
                 </div>
               </div>
             </div>
@@ -44,9 +44,15 @@
                   </div>
               </div>
               <div class="col-md-6">
-                  <div class="position-relative form-group">
-                    <label for="year" class="">Tahun</label>
-                    <input name="year" id="year" placeholder="Masukan tahun" type="text" class="form-control">
+                <div class="position-relative form-group">
+                  <label for="year" class="">Tahun</label>
+                  <select name="year" id="" class="form-control">
+                      <option value="">Plih Tahun Ajaran</option>
+                    @foreach($spp as $s)
+                    
+                      <option value="{{$s->id}}">{{$s->year}}</option>
+                    @endforeach
+                  </select>
                 </div>
               </div>
             </div>
@@ -54,21 +60,28 @@
               <label for="no_pay">Nama</label>
               <input type="text" class="form-control"   name="name">
             </div>
+             <div class="form-group">
+              <label for="no_pay">Email</label>
+              <input type="email" class="form-control"   name="email">
+            </div>
             <div class="form-group">
               <label for="year">Kelas</label>
-              <select name="majors" id="" class="form-control">
-                <option value="">Pilih Kelas</option>
-                <option value="">10</option>
-                <option value="">11</option>
-                <option value="">12</option>
+              <select name="grade_id" id="" class="form-control">
+                 <option value="">Plih Kelas</option>
+                @foreach($grade as $g)
+                 
+                  <option value="{{$g->id}}">{{$g->name}}</option>
+                @endforeach
               </select>
             </div>
             <div class="form-group">
               <label for="year">Jurusan</label>
               <select name="majors" id="" class="form-control">
-                <option value="">Pilih Jurusan</option>
-                <option value="">Rekayasa Perangkat Lunak</option>
-                <option value="">Teknik Mesin</option>
+                 <option value="">Plih Jurusan</option>
+                @foreach($grade as $gr)
+               
+                <option value="{{$gr->id}}">{{$gr->majors}}</option>
+                @endforeach
               </select>
             </div>
 

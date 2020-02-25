@@ -73,7 +73,7 @@
                       {{ Auth::user() ? Auth::user()->name : '' }}
                   </div>
                   <div class="widget-subheading">
-                      {{ Auth::user() ? 'Administrator' : '' }}
+                      {{ Auth::user() ?  Auth::user()->level  : '' }}
                   </div>
               </div>
               <div class="widget-content-right header-user-info ml-3">

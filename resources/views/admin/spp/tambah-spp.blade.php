@@ -17,7 +17,7 @@
 
   <div class="card">
     <div class="card-body">
-      <form action="#" method="POST" class="form">
+      <form action="{{route('addSpp')}}" method="POST" class="form">
         @csrf
         <div class="row">
           <div class="col-md-12 col-xl-12 mb-3">

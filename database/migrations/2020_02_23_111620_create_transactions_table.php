@@ -18,11 +18,12 @@ class CreateTransactionsTable extends Migration
             $table->integer('payment_number');
             $table->date('pay_date');
             $table->string('pay_month');
+            $table->string('status');
             $table->string('pay_year');
             $table->integer('total_pay');
-            $table->BigInteger('employee_id');
-            $table->BigInteger('student_id');
-            $table->BigInteger('money_order_id');
+            $table->Integer('user_id');
+            $table->Integer('student_id');
+            $table->Integer('money_order_id');
             $table->timestamps();
 
         });

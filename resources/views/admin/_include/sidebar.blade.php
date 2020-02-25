@@ -63,12 +63,12 @@
             Data Spp
           </a>
         </li>
-        <li>
+        {{-- <li>
           <a href="/admin/pembayaran" class="mm-{{Request::is('admin/pembayaran')?'active':''}}">
             <i class="metismenu-icon pe-7s-wallet"></i>
             Data Pembayaran
           </a>
-        </li>
+        </li> --}}
       </ul>
     </div>
     <div class="ps__rail-x" style="left: 0px; bottom: 0px;">

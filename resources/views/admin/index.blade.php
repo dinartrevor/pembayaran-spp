@@ -33,10 +33,9 @@
 					<div class="widget-content-wrapper text-white">
 							<div class="widget-content-left">
 									<div class="widget-heading">Total Siswa</div>
-									<div class="widget-subheading">Last year expenses</div>
 							</div>
 							<div class="widget-content-right">
-									<div class="widget-numbers text-white"><span>1896</span></div>
+									<div class="widget-numbers text-white"><span>{{$student->count()}}</span></div>
 							</div>
 					</div>
 			</div>
@@ -51,7 +50,7 @@
 
 							</div>
 							<div class="widget-content-right">
-							<div class="widget-numbers text-white"><span>50</span></div>
+							<div class="widget-numbers text-white"><span>{{$users->count()}}</span></div>
 							</div>
 					</div>
 
@@ -61,11 +60,10 @@
 		<div class="card mb-3 widget-content bg-grow-early">
 				<div class="widget-content-wrapper text-white">
 						<div class="widget-content-left">
-								<div class="widget-heading">Total Jurusan</div>
-								<div class="widget-subheading">People Interested</div>
+								<div class="widget-heading">Total Kelas</div>
 						</div>
 						<div class="widget-content-right">
-								<div class="widget-numbers text-white"><span>46</span></div>
+								<div class="widget-numbers text-white"><span>{{$grade->count()}}</span></div>
 						</div>
 				</div>
 		</div>

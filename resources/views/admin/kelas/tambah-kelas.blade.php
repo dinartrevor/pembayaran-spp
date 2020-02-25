@@ -17,7 +17,7 @@
 
   <div class="card">
     <div class="card-body">
-      <form action="#" method="POST" class="form">
+      <form action="{{route('addGrade')}}" method="POST" class="form">
         @csrf
         <div class="row">
           <div class="col-md-12 col-xl-12 mb-3">
@@ -46,8 +46,15 @@
             </div>
 
             <div class="form-group">
-                <label for="no_pay">Jurusan</label>
-                <input type="email" class="form-control"   name="majors">
+              <label for="no_pay">Jurusan</label>
+              <select name="majors" id="" class="form-control">
+              <option value="">Pilih Jurusan</option>
+                <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+                <option value="Teknik Komputer Jaringan">Teknik Komputer Jaringan</option>
+                <option value="Administrasi Perkantoran">Administrasi Perkantoran</option>
+                <option value="Teknik Mesin">Teknik Mesin</option>
+                <option value="Teknik Kendaran Ringan">Teknik Kendaran Ringan</option>
+              </select>
             </div>
             <button type="submit" class="btn btn-primary btn-block">Simpan</button>
             <a href="/admin/kelas" class="btn btn-light btn-block">Batal</a>

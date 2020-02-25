@@ -20,9 +20,9 @@
         <div class="col-lg">
           <p>Tanggal Sekarang: <input type="text" disabled id="datepicker"></p>
         </div>
-        <div class="col-lg">
+        {{-- <div class="col-lg">
           <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModal"> Ganti Password</button>
-        </div>
+        </div> --}}
       </div>
     </div>
   </div>

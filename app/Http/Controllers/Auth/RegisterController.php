@@ -28,7 +28,17 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected function authenticated(Request $request, $user){
+
+        if ($user->level == 'admin') {
+            return redirect('/');
+        }elseif ($user->level == 'employee') {
+            return redirect('/petugas');
+        }else{
+            return redirect('/siswa');
+        }
+        return redirect('/login');
+    }
 
     /**
      * Create a new controller instance.
